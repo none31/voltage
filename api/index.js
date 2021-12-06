@@ -36,7 +36,7 @@ bot.on('message', (msg) => {
         i=s[0]
         v=s[1]
         model.predict(
-            [parsefloat(s[0]), parsefloat(s[1])]
+            [parseFloat(s[0]), parseFloat(s[1])]
         ).then((jres)=>{
             bot.sendMessage(
                 msg.chat.id,'predicted v is ${jres[0]} volt'
