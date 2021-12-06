@@ -1,4 +1,4 @@
-var express = require('express');
+    var express = require('express');
 var r = express.Router();
 
 // load pre-trained model
@@ -39,13 +39,16 @@ bot.on('message', (msg) => {
             [parseFloat(s[0]), parseFloat(s[1])]
         ).then((jres)=>{
             bot.sendMessage(
-                msg.chat.id,'predicted v is ${jres[0]} volt'
+                msg.chat.id,
+                `predicted v is ${jres[0]} volt`
             );
             bot.sendMessage(
-                msg.chat.id,'predicted p is ${jres[1]} watt'
+                msg.chat.id,
+                `predicted p is ${jres[1]} watt`
             );
             bot.sendMessage(
-                msg.chat.id,`/predict again`
+                msg.chat.id,
+                `/predict again`
         );   
         })
     }else{
