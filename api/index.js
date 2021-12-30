@@ -49,10 +49,9 @@ bot.on('message', (msg) => {
             bot.sendMessage(
                 msg.chat.id,
                 `/predict again`
-        );   
+            ); 
+            state=0  
         })
-    }else{
-        state=0
     }
 })
 // routers
